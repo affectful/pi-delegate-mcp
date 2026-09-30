@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pi-delegate-mcp"
+version = "1.0.0"
+description = "MCP server that lets Claude (or any MCP client) consult or delegate to other models through Pi"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["mcp", "pi", "claude", "codex", "agents"]
+
+[project.scripts]
+pi-delegate-mcp = "pi_delegate_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pi_delegate_mcp"]
